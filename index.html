@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños, Oscar!</title>
+    <title>¡Feliz Cumpleaños, Oscar! - Encuentra el regalo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="animate-title">¡Feliz Cumpleaños, Oscar!</h1>
-        <img src="oscar.jpg" alt="Foto de Oscar" class="animate-image">
-        <p class="animate-text">¡Hoy es un día especial para celebrar a una persona increíble como tú!</p>
-        <p class="animate-text">Te deseamos todo lo mejor en este nuevo año de vida.</p>
-        <p class="animate-text">Que todos tus sueños y metas se hagan realidad.</p>
-        <p class="animate-text">¡Disfruta tu día al máximo!</p>
-        <p class="animate-text">Con cariño,</p>
-        <p class="animate-text">Tus amigos</p>
+        <h1>¡Feliz Cumpleaños, Oscar!</h1>
+        <p>Encuentra el regalo oculto para una sorpresa especial.</p>
+        <div class="game-container">
+            <div class="box" onclick="checkGift(1)"></div>
+            <div class="box" onclick="checkGift(2)"></div>
+            <div class="box" onclick="checkGift(3)"></div>
+            <div class="box" onclick="checkGift(4)"></div>
+            <div class="box" onclick="checkGift(5)"></div>
+            <div class="box" onclick="checkGift(6)"></div>
+            <div class="box" onclick="checkGift(7)"></div>
+            <div class="box" onclick="checkGift(8)"></div>
+            <div class="box" onclick="checkGift(9)"></div>
+        </div>
+        <div id="message"></div>
     </div>
     <script src="script.js"></script>
 </body>

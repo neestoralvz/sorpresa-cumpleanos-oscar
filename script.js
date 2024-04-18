@@ -1,13 +1,12 @@
-// Animación de título
-const title = document.querySelector('.animate-title');
-title.style.animationDelay = '0.5s';
+const giftBox = Math.floor(Math.random() * 9) + 1;
+const message = document.getElementById('message');
 
-// Animación de imagen
-const image = document.querySelector('.animate-image');
-image.style.animationDelay = '1s';
-
-// Animación de texto
-const textElements = document.querySelectorAll('.animate-text');
-textElements.forEach((element, index) => {
-    element.style.animationDelay = `${1.5 + index * 0.3}s`;
-});
+function checkGift(boxNumber) {
+    if (boxNumber === giftBox) {
+        message.textContent = '¡Felicidades! ¡Encontraste el regalo especial!';
+        message.style.color = '#ff6f00';
+    } else {
+        message.textContent = 'Sigue buscando. ¡No te rindas!';
+        message.style.color = '#000';
+    }
+}

@@ -2,70 +2,41 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f2f2f2;
-    overflow: hidden;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 h1 {
     color: #ff6f00;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px 0;
-    opacity: 0;
-    animation: zoomIn 1s ease-in-out forwards;
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
 }
 
-p {
+.box {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #ff6f00;
+    color: #fff;
+}
+
+#message {
+    margin-top: 20px;
     font-size: 18px;
-    line-height: 1.5;
-    opacity: 0;
-    animation: fadeInUp 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-weight: bold;
 }
