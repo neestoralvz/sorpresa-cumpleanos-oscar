@@ -55,6 +55,10 @@ function showConfetti() {
     updateConfetti();
 }
 
+// Evento de clic en el botón de sorpresa
+const surpriseButton = document.getElementById('surprise-button');
+surpriseButton.addEventListener('click', showConfetti);
+
 // Evento de redimensionamiento para ajustar el tamaño del canvas de confeti
 window.addEventListener('resize', function() {
     const confettiCanvas = document.getElementById('confetti-canvas');
